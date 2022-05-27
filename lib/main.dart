@@ -1,4 +1,5 @@
-import 'package:demoapp/pages/home_page.dart';
+import 'package:demoapp/pages/choose_topic_page.dart';
+import 'package:demoapp/pages/get_started_page.dart';
 import 'package:demoapp/utils/theme.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
@@ -25,7 +26,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: kColorPrimary,
       ),
-      home: const HomePage(),
+      initialRoute: '$GetStartedPage',
+      routes: {
+        '$GetStartedPage': (_) => const GetStartedPage(),
+        '$ChooseTopicPage': (_) => const ChooseTopicPage(),
+      },
     );
   }
 }
